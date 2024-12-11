@@ -1,0 +1,20 @@
+{
+    "compilerOptions": {
+      "types": ["@testing-library/jest-dom"],
+      "target": "ESNext",                // Specifies the output language level (e.g., ES5, ES6, ESNext)
+      "module": "ESNext",                // Specifies the module system (e.g., CommonJS, ESNext)
+      "moduleResolution": "Node",        // Tells TypeScript to resolve modules in a Node.js-like fashion
+      "jsx": "react",                    // Specifies that JSX should be compiled to React.createElement
+      "strict": true,                    // Enables strict type-checking options
+      "esModuleInterop": true,           // Ensures compatibility with ES Modules
+      "skipLibCheck": true,              // Skips type checking of declaration files
+      "forceConsistentCasingInFileNames": true
+    },
+    "include": [
+      "src/**/*"                         // Specifies the source files that should be compiled
+    ],
+    "exclude": [
+      "node_modules"                     // Excludes node_modules from being compiled
+    ]
+  }
+  
