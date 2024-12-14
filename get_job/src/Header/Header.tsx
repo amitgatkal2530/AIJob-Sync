@@ -9,7 +9,9 @@ const Header = () => {
       {/* Left Section */}
       <div className="flex gap-3 items-center text-bright-sun-400">
         <IconJoker className="h-10 w-10" stroke={1.25} />
-        <div className="text-3xl font-semibold">MyJob</div>
+        <div className="text-3xl font-semibold"><span className="text-2xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-bright-sun-400 to-pink-400 drop-shadow-lg">
+                JobSyncAI
+              </span></div>
       </div>
 
       {/* Center Section: Navigation Links */}
