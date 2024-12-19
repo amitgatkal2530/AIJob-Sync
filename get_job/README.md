@@ -1,46 +1,57 @@
-# Getting Started with Create React App
+<h1 align="center">AIJobSync</h1>
+<h3 align="center">“AIJobSync is a next-generation job portal designed to bridge the gap between students and recruiters through intelligent AI-driven solutions. The project focuses on providing personalized career guidance, seamless job applications, and efficient recruiter tools.”</h3>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<img align="right" alt="AI MathMingle" width="400" src="https://schulich.yorku.ca/wp-content/uploads/2020/04/AI-android-at-touch-screen.jpg">
 
-## Available Scripts
+<p align="left"> <img src="https://komarev.com/ghpvc/?username=amitgatkal2530&label=Profile%20views&color=0e75b6&style=flat" alt="amitgatkal2530" /> </p>
 
-In the project directory, you can run:
+<p align="left"> <a href="https://twitter.com/amitgatkal" target="blank"><img src="https://img.shields.io/twitter/follow/amitgatkal?logo=twitter&style=for-the-badge" alt="amitgatkal" /></a> </p>
 
-### `npm start`
+- 🔭 I’m currently working on [AIJobSync](https://github.com/amitgatkal2530/AI-MathMingle)
+- 🌱 I’m currently building expertise in machine learning and artificial intelligence models
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
-### `npm test`
+<h3 align="left">Project Overview</h3>
+<p align="left">
+### For Students:
+- **Registration & Login**: Create an account and log in to access personalized features.
+- **Resume Builder**: Design and download professional resumes.
+- **AIPath Guidance**: Get career path suggestions tailored to trending fields and individual skillsets.
+- **Find Jobs**: Search and apply for relevant job postings effortlessly.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### For Recruiters:
+- **Job Posting**: Post job openings and manage job listings.
+- **Candidate Management**: Access and review applications to find the most suitable candidates.
 
-### `npm run build`
+## Technologies Used
+- **Frontend**: ReactJS
+- **Backend**: Spring Boot
+- **Database**: MongoDB
+- **Machine Learning**: Python-based AI models for resume scoring and career guidance.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Future Enhancements
+- **User Engagement Metrics**: Aim to improve user engagement by 40% using advanced AI algorithms.
+- **Scalability**: Expand to support hundreds of concurrent users and job applications.
+- **AI Optimization**: Enhance AI models to provide deeper insights into job trends and personalized recommendations.
+</p>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+  
+    
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+<h3 align="left">Technologies I Use</h3>
+<h3 align="left">Top Skills</h3>
+<p align="left">
+- **Programming Languages:** Python ,Java,<br>
+- **Libraries & Frameworks:** Spring Boot,Tenserflow,MongoDB<br>
+
+- **Web Development:** HTML, CSS, React
+</p>
