@@ -135,7 +135,7 @@ export const testimonials = [
 
 export const footerLinks = [
   {ttile: "Product",links: ["Find Job","Find Company","Find Employee"]},
-  {ttile: "Company",links: ["About Us","Comtact Us","Privacy Policy","Terms & Conditions"]},
+  {ttile: "Company",links: ["About Us","Contact Us","Privacy Policy","Terms & Conditions"]},
   {ttile: "Support",links: ["Help & Support","Feedback","Find FAQ"]},
 
 ];
