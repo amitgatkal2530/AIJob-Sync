@@ -8,26 +8,8 @@ export const card=[
 {name:"Job Type", icon:IconRecharging,value:"Full Time"},
 ]
 export const skills = [
-    'React',
-    'Spring Boot',
-    'Java',
-    'Python',
-    'Node.js',
-    'MongoDB',
-    'Express',
-    'Django',
-    'SQL',
-    'TypeScript',
-    'HTML',
-    'CSS',
-    'Redux',
-    'GraphQL',
-    'PostgreSQL',
-    'Docker',
-    'Kubernetes',
-    'AWS',
-    'TensorFlow',
-    'Keras',
+    'React','Spring Boot', 'Java', 'Python','Node.js','MongoDB','Express','Django','SQL','TypeScript', 'HTML',
+     'CSS', 'Redux', 'GraphQL', 'PostgreSQL', 'Docker', 'Kubernetes','AWS','TensorFlow','Keras',
   ];
   
 

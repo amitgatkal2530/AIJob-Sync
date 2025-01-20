@@ -164,7 +164,7 @@ export const applicantsList = [
     },
   ];
   
-  export const profile = [
+  export const profile =
     {
       name: "Om Kumawat",
       role: "Software Engineer",
@@ -204,129 +204,129 @@ export const applicantsList = [
           certificationId: "AWS-SA-67890"
         },
       ],
-    },
-    {
-      name: "Sarah Johnson",
-      role: "Product Manager",
-      company: "Meta",
-      location: "San Francisco, United States",
-      about: "As a Product Manager, I specialize in user-centric design and creating impactful strategies to enhance product value.",
-      skills: ["Agile", "Product Strategy", "UI/UX"],
-      experience: [
-        {
-          title: "Product Manager",
-          company: "Meta",
-          location: "San Francisco, United States",
-          startDate: "February 2020",
-          endDate: "Present",
-          description: "Led cross-functional teams to launch new features, increasing user engagement by 25%. Spearheaded the development of product roadmaps."
-        },
-        {
-          title: "Associate Product Manager",
-          company: "Adobe",
-          location: "San Jose, United States",
-          startDate: "August 2017",
-          endDate: "January 2020",
-          description: "Assisted in market analysis and feature prioritization to improve product competitiveness."
-        },
-      ],
-      certifications: [
-        {
-          name: "Scrum Master Certification",
-          issuer: "Netflix",
-          issueDate: "April 2018",
-          certificationId: "SMC-23456"
-        },
-      ],
-    },
-    {
-      name: "Michael Lee",
-      role: "Data Scientist",
-      company: "Amazon",
-      location: "Seattle, United States",
-      about: "I am a Data Scientist with expertise in analyzing large datasets, building predictive models, and delivering actionable insights.",
-      skills: ["Python", "Machine Learning", "Data Analysis"],
-      experience: [
-        {
-          title: "Data Scientist",
-          company: "Amazon",
-          location: "Seattle, United States",
-          startDate: "March 2019",
-          endDate: "Present",
-          description: "Developed machine learning models that improved forecasting accuracy by 15%. Conducted data analysis to support business decisions."
-        },
-        {
-          title: "Data Analyst",
-          company: "IBM",
-          location: "Boston, United States",
-          startDate: "July 2016",
-          endDate: "February 2019",
-          description: "Analyzed large datasets to uncover trends and presented findings to stakeholders."
-        },
-      ],
-      certifications: [
-        {
-          name: "Machine Learning Certification",
-          issuer: "IBM",
-          issueDate: "June 2018",
-          certificationId: "ML-78901"
-        },
-        {
-          name: "Python for Data Science",
-          issuer: "Spotify",
-          issueDate: "March 2017",
-          certificationId: "PDS-34567"
-        },
-      ],
-    },
-    {
-      name: "Emma Rodriguez",
-      role: "UI/UX Designer",
-      company: "Apple",
-      location: "Cupertino, United States",
-      about: "With a strong background in visual design, I craft intuitive and engaging interfaces that delight users.",
-      skills: ["Adobe XD", "Sketch", "Figma"],
-      experience: [],
-      certifications: [],
-    },
-    {
-      name: "David Brown",
-      role: "DevOps Engineer",
-      company: "Spotify",
-      location: "Stockholm, Sweden",
-      about: "I specialize in creating efficient pipelines and ensuring system reliability to deliver seamless experiences.",
-      skills: ["CI/CD", "AWS", "Kubernetes"],
-      experience: [],
-      certifications: [],
-    },
-    {
-      name: "Sophia Williams",
-      role: "AI Research Scientist",
-      company: "OpenAI",
-      location: "San Francisco, United States",
-      about: "As an AI Research Scientist, I focus on developing innovative solutions to advance machine intelligence.",
-      skills: ["Deep Learning", "NLP", "Reinforcement Learning"],
-      experience: [],
-      certifications: [],
-    },
-    {
-      name: "Oliver Davis",
-      role: "Cloud Architect",
-      company: "Microsoft",
-      location: "Redmond, United States",
-      about: "Experienced in designing scalable cloud-based solutions and implementing secure architectures.",
-      skills: ["Azure", "Cloud Security", "Microservices"],
-      experience: [],
-      certifications: [],
-    },
-    {
-      name: "Isabella Martinez",
-      role: "Marketing Strategist",
-      company: "Netflix",
-      location: "Los Angeles, United States",
-      about: "I develop impactful marketing campaigns that connect brands with their audience effectively.",
-      skills: ["Digital Marketing", "SEO", "Branding"],
-      experience: [],
-      certifications: [],
-    },
-  ]
+    }
+    // {
+    //   name: "Sarah Johnson",
+    //   role: "Product Manager",
+    //   company: "Meta",
+    //   location: "San Francisco, United States",
+    //   about: "As a Product Manager, I specialize in user-centric design and creating impactful strategies to enhance product value.",
+    //   skills: ["Agile", "Product Strategy", "UI/UX"],
+    //   experience: [
+    //     {
+    //       title: "Product Manager",
+    //       company: "Meta",
+    //       location: "San Francisco, United States",
+    //       startDate: "February 2020",
+    //       endDate: "Present",
+    //       description: "Led cross-functional teams to launch new features, increasing user engagement by 25%. Spearheaded the development of product roadmaps."
+    //     },
+    //     {
+    //       title: "Associate Product Manager",
+    //       company: "Adobe",
+    //       location: "San Jose, United States",
+    //       startDate: "August 2017",
+    //       endDate: "January 2020",
+    //       description: "Assisted in market analysis and feature prioritization to improve product competitiveness."
+    //     },
+    //   ],
+    //   certifications: [
+    //     {
+    //       name: "Scrum Master Certification",
+    //       issuer: "Netflix",
+    //       issueDate: "April 2018",
+    //       certificationId: "SMC-23456"
+    //     },
+    //   ],
+    // },
+    // {
+    //   name: "Michael Lee",
+    //   role: "Data Scientist",
+    //   company: "Amazon",
+    //   location: "Seattle, United States",
+    //   about: "I am a Data Scientist with expertise in analyzing large datasets, building predictive models, and delivering actionable insights.",
+    //   skills: ["Python", "Machine Learning", "Data Analysis"],
+    //   experience: [
+    //     {
+    //       title: "Data Scientist",
+    //       company: "Amazon",
+    //       location: "Seattle, United States",
+    //       startDate: "March 2019",
+    //       endDate: "Present",
+    //       description: "Developed machine learning models that improved forecasting accuracy by 15%. Conducted data analysis to support business decisions."
+    //     },
+    //     {
+    //       title: "Data Analyst",
+    //       company: "IBM",
+    //       location: "Boston, United States",
+    //       startDate: "July 2016",
+    //       endDate: "February 2019",
+    //       description: "Analyzed large datasets to uncover trends and presented findings to stakeholders."
+    //     },
+    //   ],
+    //   certifications: [
+    //     {
+    //       name: "Machine Learning Certification",
+    //       issuer: "IBM",
+    //       issueDate: "June 2018",
+    //       certificationId: "ML-78901"
+    //     },
+    //     {
+    //       name: "Python for Data Science",
+    //       issuer: "Spotify",
+    //       issueDate: "March 2017",
+    //       certificationId: "PDS-34567"
+    //     },
+    //   ],
+    // },
+    // {
+    //   name: "Emma Rodriguez",
+    //   role: "UI/UX Designer",
+    //   company: "Apple",
+    //   location: "Cupertino, United States",
+    //   about: "With a strong background in visual design, I craft intuitive and engaging interfaces that delight users.",
+    //   skills: ["Adobe XD", "Sketch", "Figma"],
+    //   experience: [],
+    //   certifications: [],
+    // },
+    // {
+    //   name: "David Brown",
+    //   role: "DevOps Engineer",
+    //   company: "Spotify",
+    //   location: "Stockholm, Sweden",
+    //   about: "I specialize in creating efficient pipelines and ensuring system reliability to deliver seamless experiences.",
+    //   skills: ["CI/CD", "AWS", "Kubernetes"],
+    //   experience: [],
+    //   certifications: [],
+    // },
+    // {
+    //   name: "Sophia Williams",
+    //   role: "AI Research Scientist",
+    //   company: "OpenAI",
+    //   location: "San Francisco, United States",
+    //   about: "As an AI Research Scientist, I focus on developing innovative solutions to advance machine intelligence.",
+    //   skills: ["Deep Learning", "NLP", "Reinforcement Learning"],
+    //   experience: [],
+    //   certifications: [],
+    // },
+    // {
+    //   name: "Oliver Davis",
+    //   role: "Cloud Architect",
+    //   company: "Microsoft",
+    //   location: "Redmond, United States",
+    //   about: "Experienced in designing scalable cloud-based solutions and implementing secure architectures.",
+    //   skills: ["Azure", "Cloud Security", "Microservices"],
+    //   experience: [],
+    //   certifications: [],
+    // },
+    // {
+    //   name: "Isabella Martinez",
+    //   role: "Marketing Strategist",
+    //   company: "Netflix",
+    //   location: "Los Angeles, United States",
+    //   about: "I develop impactful marketing campaigns that connect brands with their audience effectively.",
+    //   skills: ["Digital Marketing", "SEO", "Branding"],
+    //   experience: [],
+    //   certifications: [],
+    // },
+ 

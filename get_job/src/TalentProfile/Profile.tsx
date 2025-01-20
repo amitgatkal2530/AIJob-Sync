@@ -40,7 +40,7 @@ const Profile = (props: any) => {
         </div>
       </div>
 
-      {/* Dividers and Sections */}
+      
       <Divider my="xl" />
 
       {/* About Section */}
@@ -55,14 +55,14 @@ const Profile = (props: any) => {
 
       {/* Skills Section */}
       <div className="px-3">
-        <div className="text-2xl font-semibold mb-3 text-white">Skills</div>
+        <div className="text-2xl font-semibold mb-3 ">Skills</div>
         <div className="flex flex-wrap gap-2">
-          {props.skills.map((skills: any, index: any) => (
+          {props.skills.map((skill:any,index:any) => (
             <div
               key={index}
               className="bg-bright-sun-300 text-sm font-medium bg-opacity-15 rounded-3xl text-bright-sun-400 px-3 py-1"
             >
-              {skills}
+              {skill}
             </div>
           ))}
         </div>

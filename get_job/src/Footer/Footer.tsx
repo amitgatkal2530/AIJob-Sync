@@ -16,6 +16,7 @@ import {
 } from "@tabler/icons-react";
 import React from "react";
 import { footerLinks } from "../Data/Data";
+import { useLocation } from "react-router-dom";
 
 const Footer = () => {
   const icons = {
@@ -31,7 +32,8 @@ const Footer = () => {
     "Find FAQ": <IconQuestionMark className="h-4 w-4 text-bright-sun-400" />,
   };
 
-  return (
+  const location=useLocation()
+  return location.pathname!="/signup" && location.pathname!="/login"?(
     <footer className="pt-20 pb-10  bg-mine-shaft-950 text-mine-shaft-100 px-8">
       <div className="flex flex-wrap gap-10 justify-between bg-mine-shaft-950 font-['poppins'] ">
         {/* Left Section */}
@@ -103,7 +105,9 @@ const Footer = () => {
         </span>
       </div>
     </footer>
-  );
+    
+  )
+  :<></>
 };
 
 export default Footer;

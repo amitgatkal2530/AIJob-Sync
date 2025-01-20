@@ -23,7 +23,7 @@ const TalentProfilePage = () => {
       <div className="flex gap-5">
         {/* Profile section takes 3/4 of the width */}
         <div className="w-3/4">
-          {profile.length > 0 && <Profile {...profile[0]} />}
+         <Profile />
         </div>
 
         {/* RecommendedTalent section takes 1/4 of the width */}
