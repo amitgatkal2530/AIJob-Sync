@@ -1,10 +1,22 @@
 import { Button, Divider } from "@mantine/core";
 import { IconBriefcase, IconMapPin } from "@tabler/icons-react";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import CertiCard from "./CertiCard";
 import ExpCard from "./ExpCard";
+import { useParams } from "react-router-dom";
+import { getProfile } from "../Services/ProfileService";
 
 const Profile = (props: any) => {
+  const {id}=useParams();
+  const [profile,setProfile]=useState<any>({});
+  useEffect(()=>{
+    window.scrollTo(0,0);
+    getProfile(id).then((res)=>{
+      setProfile(res);
+    }).catch((err)=>{
+      console.log(err);
+    })
+  },[id])
   return (
     <div className="w-full lg:w-4/4 p-3 rounded-lg shadow-md border border-gray-700 bg-mine-shaft-800">
       {/* Profile Banner and Avatar */}
@@ -17,7 +29,8 @@ const Profile = (props: any) => {
         />
         <img
           className="h-48 w-48 rounded-full absolute left-3 bottom-0 border-8 border-gray-800"
-          src="/avatar-3.png"
+          src={profile?.picture?`data:image/jpeg;base64,${profile?.picture}`:`/avatar-3.png`}
+          
           alt=""
         />
       </div>
@@ -25,18 +38,18 @@ const Profile = (props: any) => {
       {/* Profile Name and Contact */}
       <div className="px-3 mt-16">
         <div className="text-3xl font-semibold flex justify-between items-center">
-          {props.name}
+          {profile.name}
           <Button color="bright-sun.4" variant="light">
             Message
           </Button>
         </div>
         <div className="text-xl flex gap-1 items-center mt-2">
           <IconBriefcase className="h-5 w-5" stroke={1.5} />
-          {props.role} &bull; {props.company}
+          {profile.jobTitle} &bull; {profile.company}
         </div>
         <div className="text-lg text-mine-shaft-300 flex gap-1 items-center mt-1">
           <IconMapPin className="h-5 w-5" stroke={1.5} />
-          {props.location}
+          {profile.location}
         </div>
       </div>
 
@@ -47,7 +60,7 @@ const Profile = (props: any) => {
       <div className="px-3">
         <div className="text-2xl font-semibold mb-3 text-white">About</div>
         <div className="text-sm text-mine-shaft-300 text-justify">
-          {props.about}
+          {profile.about}
         </div>
       </div>
 
@@ -57,14 +70,15 @@ const Profile = (props: any) => {
       <div className="px-3">
         <div className="text-2xl font-semibold mb-3 ">Skills</div>
         <div className="flex flex-wrap gap-2">
-          {props.skills.map((skill:any,index:any) => (
+          {
+          profile?.skills?.map((skill:any,index:any) => 
             <div
               key={index}
               className="bg-bright-sun-300 text-sm font-medium bg-opacity-15 rounded-3xl text-bright-sun-400 px-3 py-1"
             >
               {skill}
             </div>
-          ))}
+          )}
         </div>
       </div>
 
@@ -74,9 +88,9 @@ const Profile = (props: any) => {
       <div className="px-3">
         <div className="text-2xl font-semibold mb-5 text-white">Experience</div>
         <div className="flex flex-col gap-8">
-          {props.experience.map((exp: any, index: any) => (
+          {profile?.experiences?.map((exp: any, index: any) => 
             <ExpCard key={index} {...exp} />
-          ))}
+          )}
         </div>
       </div>
 
@@ -86,9 +100,9 @@ const Profile = (props: any) => {
       <div className="px-3">
         <div className="text-2xl font-semibold mb-5 text-white">Certifications</div>
         <div className="flex flex-col gap-8">
-          {props.certifications.map((certi: any, index: any) => (
+          {profile?.certifications?.map((certi: any, index: any) => 
             <CertiCard key={index} {...certi} />
-          ))}
+          )}
         </div>
       </div>
     </div>

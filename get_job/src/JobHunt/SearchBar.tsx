@@ -1,13 +1,32 @@
 import React, { useState } from "react";
-import { MultiSelectCreatable } from "./MultiSelectCreatable";
+import { MultiSelectCreatable } from "../JobHunt/MultiSelectCreatable";
 import { dropdownData } from "../Data/JobsData";
-import { Divider, RangeSlider } from "@mantine/core";
+import { Divider, Input, RangeSlider } from "@mantine/core";
+import { searchFields, searchFieldsForJob } from "../Data/TalentData";
+import { IconUserCircle } from "@tabler/icons-react";
+import { useDispatch } from "react-redux";
+import { updateFilter } from "../Slices/FilterSlice";
 
 const SearchBar = () => {
-    const [value, setValue] = useState<[number, number]>([1, 100]);
+    const [value, setValue] = useState<[number, number]>([0, 100]);
+    const [name,setName]=useState('');
+    const dispatch=useDispatch();
+    const handleChange=(name:any,event:any)=>{
+            if(name=="exp") dispatch(updateFilter({exp:event}))
+            else { 
+                dispatch(updateFilter({name:event.target.value}));
+                setName(event.target.value);
+                
+
+         }
+    }
     return (
-        <div className="flex px-5 py-8  ">
-            {dropdownData.map((data, index) => (<>
+        <div className="flex px-5 py-8  !text-mine-shaft-100 flex">
+            {/* <div className="flex items-center">
+                <div className="text-bright-sun-400 bg-mine-shaft-900 rounded-full p-1.5 mr-2"><IconUserCircle size={20} /></div>
+                <Input defaultValue={name} onChange={(e)=>handleChange("name",e)} className="[&_input]:!placeholder-mine-shaft-300" variant="unstyled" placeholder="Job Title" />
+            </div> */}
+            { searchFieldsForJob.map((data, index) => (<>
                 <div key={index} className="w-1/5">
                     <MultiSelectCreatable{...data} />
                 </div>
@@ -16,10 +35,10 @@ const SearchBar = () => {
             ))}
             <div className="w-1/5">
             <div className="flex justify-between">
-                <div>Salary</div>
-                <div> &#8377;{value[0]} LPA-&#8377;{value[1]} LPA </div>
+                <div>Salary (LPA)</div>
+                <div> {value[0]} - {value[1]}  </div>
             </div>
-            <RangeSlider color="bright-sun.4"size= "xs" value={value} onChange={setValue} />
+            <RangeSlider onChangeEnd={(e)=>handleChange("exp",e)} color="bright-sun.4"size= "xs" min={1} max={50} value={value} onChange={setValue} />
             </div>
         </div>
     );

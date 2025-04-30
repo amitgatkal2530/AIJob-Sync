@@ -2,10 +2,13 @@ import { useEffect, useState } from 'react';
 import { Checkbox, CheckIcon, Combobox, Group, Input, Pill, PillsInput, ScrollArea, useCombobox } from '@mantine/core';
 import React from 'react';
 import { IconSearch, IconSelector } from '@tabler/icons-react';
+import { useDispatch } from 'react-redux';
+import { updateFilter } from '../Slices/FilterSlice';
 
 
 
 export function MultiSelectCreatable( props:any) {
+  const dispatch=useDispatch();
     useEffect(()=>{
         setData(props.options);
     },[])
@@ -26,15 +29,20 @@ export function MultiSelectCreatable( props:any) {
     if (val === '$create') {
       setData((current) => [...current, search]);
       setValue((current) => [...current, search]);
+      dispatch(updateFilter({[props.title]:[...value,search]}));
     } else {
+      dispatch(updateFilter({[props.title]:value.includes(val)?value.filter((v)=>v!==val):[...value,val]}));
       setValue((current) =>
         current.includes(val) ? current.filter((v) => v !== val) : [...current, val]
-      );
+        
+    );
     }
   };
 
-  const handleValueRemove = (val: string) =>
+  const handleValueRemove = (val: string) =>{
+    dispatch(updateFilter({[props.title]:value.filter((v)=>v!==val)}))
     setValue((current) => current.filter((v) => v !== val));
+  }
 
   const values = value
   .slice( 0,1 )
@@ -84,7 +92,7 @@ export function MultiSelectCreatable( props:any) {
       <Combobox.Search
             value={search}
             onChange={(event) => setSearch(event.currentTarget.value)}
-            placeholder="Search groceries"
+            placeholder="Search "
           />
         <Combobox.Options>
             <ScrollArea.Autosize mah={200} type="scroll">

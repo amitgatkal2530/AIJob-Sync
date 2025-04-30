@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { RichTextEditor as MantineRichTextEditor, Link } from '@mantine/tiptap';
 import { useEditor } from '@tiptap/react';
 import Highlight from '@tiptap/extension-highlight';
@@ -9,7 +9,10 @@ import Superscript from '@tiptap/extension-superscript';
 import SubScript from '@tiptap/extension-subscript';
 import { content } from "../Data/PostJob";
 
-const RichTextEditorComponent = () => {
+const RichTextEditorComponent = (props:any) => {
+  useEffect(()=>{
+    editor?.commands.setContent(props.data)
+  },[props.data])
   const editor = useEditor({
     extensions: [
       StarterKit,
@@ -20,7 +23,10 @@ const RichTextEditorComponent = () => {
       Highlight,
       TextAlign.configure({ types: ['heading', 'paragraph'] }),
     ],
-    content,
+    content:props.form.getValues().description,
+    onUpdate({editor}){
+      props.form.setFieldValue('description',editor.getHTML());
+    }
   });
   return (
     <MantineRichTextEditor editor={editor}>

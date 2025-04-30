@@ -13,18 +13,36 @@ import {
   IconSun,
   IconLogout2,
 } from '@tabler/icons-react';
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { Link, useParams } from 'react-router-dom';
+import { removeUser } from '../Slices/UserSlice';
+import { getProfile } from '../Services/ProfileService';
 
 const ProfileMenu = () => {
+  const {id}=useParams()
+  const dispatch=useDispatch();
+  const user=useSelector((state:any)=>state.user);
  const [checked, setChecked] = useState(false);
  const [opened,setOpened]=useState(false);
+ const [profile,setProfile]=useState<any>({});
+   useEffect(()=>{
+     window.scrollTo(0,0);
+     getProfile(id).then((res)=>{
+       setProfile(res);
+     }).catch((err)=>{
+       console.log(err);
+     })
+   },[id])
+ const handleLogout=()=>{
+      dispatch(removeUser());
+ }
   return (
     <Menu shadow="md" width={200} opened={opened} onChange={(setOpened)}>
       <Menu.Target>
       <div className="flex items-center gap-2">
-               <div className="text-1xl cursor-pointer font-semibold">Amit</div>
-               <Avatar src="avatar-9.png" />
+               <div className="text-1xl cursor-pointer font-semibold">{user.name}</div>
+               <Avatar size="lg" src={profile?.picture?`data:image/jpeg;base64,${profile?.picture}`:`/avatar-3.png`} />
              </div>
       </Menu.Target>
 
@@ -55,7 +73,7 @@ const ProfileMenu = () => {
         <Menu.Divider />
 
        
-        <Menu.Item
+        <Menu.Item onClick={handleLogout}
           color="red"
           leftSection={<IconLogout2 size={14} />}
         >

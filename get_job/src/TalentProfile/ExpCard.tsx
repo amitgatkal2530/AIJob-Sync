@@ -1,4 +1,5 @@
 import React from "react";
+import { formatDate } from "../Services/Utitlities";
 
 const ExpCard=(props:any)=>{
     return(
@@ -16,7 +17,7 @@ const ExpCard=(props:any)=>{
           </div>
         </div>
         <div className="text-sm text-mine-shaft-300">
-            {props.startDate}-{props.endDate}
+            {formatDate(props.startDate)}-{formatDate(props.endDate)}
         </div>
       </div>
           <div className="text-sm text-mine-shaft-300 text-justify ">

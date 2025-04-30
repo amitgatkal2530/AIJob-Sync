@@ -1,10 +1,17 @@
-import { IconMapPin, IconRecharging, IconSearch } from "@tabler/icons-react";
+import { IconBriefcase, IconMapPin, IconRecharging, IconSearch } from "@tabler/icons-react";
 
 
 export const searchFields=[
     {title:"job Title",icon:IconSearch,options:['Designer','Devloper','Product Manager','MarketingSpecialist','Data Analyst','Sales Executive','Content Writer','Customer Support']},
     {title:"Location",icon:IconMapPin,options:['Delhi','new York','San Francisco','London','Berline','Tokyo','Sydney','Toronto']},
     {title:"Skills",icon:IconRecharging,options:['Html','CSS','JavaScript','React','Angular','NodeJS','Python','Java','Ruby','PHP','SQL','MongoDB','Post','Devopes','Cloud']},
+
+]
+export const searchFieldsForJob=[
+  {title:"job Title",icon:IconSearch,options:['Designer','Devloper','Product Manager','MarketingSpecialist','Data Analyst','Sales Executive','Content Writer','Customer Support']},
+  {title:"Location",icon:IconMapPin,options:['Delhi','new York','San Francisco','London','Berline','Tokyo','Sydney','Toronto']},
+  {title:"Experience",icon:IconBriefcase,options:['Entry Level','Intermediate','Expert']},
+  {title:"Job Type",icon:IconRecharging,options:['Full Time','Internship','Part Time','Contract']},
 
 ]
 

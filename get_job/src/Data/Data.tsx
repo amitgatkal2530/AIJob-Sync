@@ -75,9 +75,9 @@ export const workingSteps = [
     description: "Create a professional resume tailored to your skills and experience.",
   },
   {
-    name: "AI-Suggested Career Path",
+    name: "AI-Mock Interview",
     image: "AI.png", // Ensure this image is in your /public/Working folder.
-    description: "Let AI recommend the best career paths based on your profile.",
+    description: " Practice mock interviews with AI-generated questions tailored to the user's chosen domain..",
   },
   {
     name: "Apply for Job",

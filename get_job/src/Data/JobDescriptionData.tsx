@@ -2,10 +2,10 @@ import { IconBriefcase, IconMapPin, IconPremiumRights, IconRecharging } from "@t
 
 
 export const card=[
-{name:"Location",icon:IconMapPin,value:"New York"},
-{name:"Experiance",icon:IconBriefcase,value:"Expert"},
-{name:"Salary",icon:IconPremiumRights,value:"48 LPA"},
-{name:"Job Type", icon:IconRecharging,value:"Full Time"},
+{name:"Location",icon:IconMapPin,value:"New York",id:"location"},
+{name:"Experiance",icon:IconBriefcase,value:"Expert",id:"experience"},
+{name:"Salary",icon:IconPremiumRights,value:"48 LPA",id:"packageOffered"},
+{name:"Job Type", icon:IconRecharging,value:"Full Time",id:"jobType"},
 ]
 export const skills = [
     'React','Spring Boot', 'Java', 'Python','Node.js','MongoDB','Express','Django','SQL','TypeScript', 'HTML',
